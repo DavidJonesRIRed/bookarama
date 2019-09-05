@@ -1,9 +1,25 @@
-const bookList = document.querySelector("#book-list");
+var btns = document.querySelectorAll("#book-list .delete");
 
-console.log("book-list next sibling is", bookList.nextSibling);
-console.log("book-list next element sibling is", bookList.nextElementSibling);
+console.log(btns);
 
-console.log("book-list previous sibling is", bookList.previousSibling);
-console.log("book-list previous element sibling is", bookList.previousElementSibling);
+Array.from(btns).forEach(function(btn)
+{
+    //console.log(btn);
 
-bookList.previousElementSibling.querySelector("p").innerHTML += "<br/> too cool for everyone else!";
+    btn.addEventListener("click",function(e)
+    {
+        //console.log(e);
+        
+        const li = e.target.parentElement;
+        
+        li.parentNode.removeChild(li);
+    });
+});
+
+const link = document.querySelector("#page-banner a");
+
+link.addEventListener("click",function(e)
+{
+    e.preventDefault();
+    console.log("navigation to",e.target.textContent,"was prevented");
+});
