@@ -1,9 +1,3 @@
-var titles = document.getElementsByClassName("title");
+const wrap = document.querySelector("#wrapper");
 
-//console.log(Array.isArray(titles));
-//console.log(Array.isArray(Array.from(titles)));
-
-Array.from(titles).forEach(function(item)
-{
-    console.log(item);
-});
+console.log(wrap);
