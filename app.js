@@ -22,5 +22,21 @@ addForm.addEventListener("submit",function(e)
 
     const value = addForm.querySelector("input[type="text"]").value;
 
-    console.log(value);
+    //create elements
+    const li = document.createElement("li");
+    const bookName = document.createElement("span");
+    const deleteBtn = document.createElement("span");
+
+    //add content
+    deleteBtn.textContent = "delete";
+    bookName.textContent = value;
+    
+    //append to DOC
+    li.appendChild(bookName);
+    li.appendChild(deleteBtn);
+    list.appendChild(li);
+/*     <li>
+	    			<span class="name">Name of the Wind</span>
+	    			<span class="delete">delete</span>
+	    		</li> */
 });
