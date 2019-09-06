@@ -13,14 +13,14 @@ list.addEventListener("click", function(e)
     }
 });
 
-//add books-list
-const addForm = document.forms("add-book");
+//add books
+const addForm = document.forms["add-book"];
 
 addForm.addEventListener("submit",function(e)
 {
     e.preventDefault();
 
-    const value = addForm.querySelector("input[type="text"]").value;
+    const value = addForm.querySelector('input[type="text"]').value;
 
     //create elements
     const li = document.createElement("li");
@@ -30,13 +30,13 @@ addForm.addEventListener("submit",function(e)
     //add content
     deleteBtn.textContent = "delete";
     bookName.textContent = value;
+
+    //add classes
+    bookName.classList.add("name");
+    deleteBtn.classList.add("delete");
     
     //append to DOC
     li.appendChild(bookName);
     li.appendChild(deleteBtn);
     list.appendChild(li);
-/*     <li>
-	    			<span class="name">Name of the Wind</span>
-	    			<span class="delete">delete</span>
-	    		</li> */
 });
