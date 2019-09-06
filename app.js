@@ -1,5 +1,6 @@
 const list =document.querySelector("#book-list ul");
 
+//delete book
 list.addEventListener("click", function(e)
 {
     if(e.target.className == "delete")
