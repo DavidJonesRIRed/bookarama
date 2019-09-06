@@ -3,7 +3,7 @@
  */
 const list =document.querySelector("#book-list ul");
 
-//delete book
+//delete books
 list.addEventListener("click", function(e)
 {
     if(e.target.className == "delete")
@@ -39,4 +39,14 @@ addForm.addEventListener("submit",function(e)
     li.appendChild(bookName);
     li.appendChild(deleteBtn);
     list.appendChild(li);
+});
+
+//hide books
+const hideBox = document.querySelector("#hide");
+hideBox.addEventListener("change", function(e)
+{
+    if(hideBox.checked)
+    {
+        list.style.display = "inital";
+    }
 });
